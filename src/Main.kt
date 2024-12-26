@@ -9,6 +9,10 @@
 * Если нет - повторить ввод.
 * */
 fun main() {
+    getRoomNumber()
+}
+
+fun getRoomNumber(): Int {
     val prompt = "Введите номер аудитории в диапазоне от 10 до 350"
 
     var number: Int? = -1
@@ -22,4 +26,6 @@ fun main() {
     } while (number in 10..350)
 
     println(number)
+
+    return ...
 }
