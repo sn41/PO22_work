@@ -9,5 +9,19 @@
 * Если нет - повторить ввод.
 * */
 fun main() {
+    val prompt = "Введите номер аудитории в диапазоне от 10 до 350"
 
+    var number: Int? = -1
+
+    do {
+        if (number == null) println("Вы ввели неверное число, повторите ввод")
+        else println(prompt)
+
+        val string = readLine()
+        if (string != null) {
+            number = string.toIntOrNull()
+        }
+    } while (number in 10..350)
+
+    println(number)
 }
