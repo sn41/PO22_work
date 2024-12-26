@@ -14,13 +14,11 @@ fun main() {
     var number: Int? = -1
 
     do {
-        if (number == null) println("Вы ввели неверное число, повторите ввод")
-        else println(prompt)
+        if (number == -1) println(prompt)
+        else println("Ошибка ввода, число должно находиться в диапазоне от 10 до 350")
 
-        val string = readLine()
-        if (string != null) {
-            number = string.toIntOrNull()
-        }
+        number = readLine()?.toIntOrNull()
+
     } while (number in 10..350)
 
     println(number)
